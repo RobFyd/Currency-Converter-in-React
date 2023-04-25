@@ -1,10 +1,8 @@
-import Fieldset from "./Fieldset";
+import Form from "./Form";
 
 function App() {
   return (
-    <form className="form">
-        <Fieldset />
-    </form>
+    <Form />
   );
 }
 
