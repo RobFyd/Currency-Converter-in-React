@@ -2,7 +2,7 @@ import Fieldset from "../Fieldset";
 import "./style.css"
 
 const Form = () => (
-<form className="form">
+    <form className="form">
         <Fieldset />
     </form>
 );
