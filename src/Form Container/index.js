@@ -1,14 +1,7 @@
 import { useState } from 'react';
-import { currencies } from './currencies';
 import "./style.css"
 
-const FormContainer = ({ setResult }) => {}
-
-
-
-
-
-return (
+const FormContainer = () => (
     <div className="form__container">
         <div className="form__container--item">
             <label className="form__label">
@@ -37,6 +30,9 @@ return (
         </div>
     </div>
 );
+
+
+
 
 
 export default FormContainer;
