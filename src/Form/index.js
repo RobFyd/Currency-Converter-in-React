@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Fieldset from "../Fieldset";
-import { currencies } from '../Form/currencies';
+import { currencies } from './currencies';
 import "./style.css"
 
 const Form =

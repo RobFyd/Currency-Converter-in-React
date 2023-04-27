@@ -1,12 +1,11 @@
-import { useState } from 'react';
 import "./style.css"
 
-const FormContainer = () => (
+const FormContainer = ({ addAmount, setAmount, currencyFrom }) => (
     <div className="form__container">
         <div className="form__container--item">
             <label className="form__label">
                 Currency From
-                <select className="form__field" name="currencyFrom">
+                <select className="form__field" value={currencyFrom} name="currencyFrom">
                     <option value="gbp" selected>GBP</option>
                     <option value="pln">PLN</option>
                     <option value="eur">EUR</option>
@@ -24,8 +23,16 @@ const FormContainer = () => (
             </label>
         </div>
         <div className="form__container--item">
-            <label className="form__label">Amount* <input type="number" min="1" step="any"
-                className="form__field--amount" required />
+            <label className="form__label">Amount*
+                <input
+                    value={addAmount}
+                    onChange={({ target }) => setAmount(target.value)}
+                    type="number"
+                    min="1"
+                    step="any"
+                    className="form__field--amount"
+                    required
+                    autoFocus />
             </label>
         </div>
     </div>
