@@ -4,9 +4,9 @@ import { currencies } from './currencies';
 import "./style.css"
 
 const Form =
-    ({ setResult }) => {
-        const [currencyFrom, currencyFromValue] = useState(currencies[0].value);
-        const [currencyTo, currencyToValue] = useState(currencies[0].value);
+    ({ setResult, result, currencyToName, }) => {
+        const [currencyFrom, currencyFromValue] = useState(currencies[0]);
+        const [currencyTo, currencyToValue] = useState(currencies[0]);
         const [addAmount, setAmount] = useState(0);
 
         const onFormSubmit = (event) => {
@@ -17,12 +17,12 @@ const Form =
 
         setResult({
             calculatedResult: result,
-            currencyToName: currencyToName.name
+            currencyToName: currencyToName.name  //currencyTo
         });
 
         return (
             <form className="form" onSubmit={onFormSubmit}>
-                <Fieldset />
+                <Fieldset result={result} />
             </form>
         );
     }
